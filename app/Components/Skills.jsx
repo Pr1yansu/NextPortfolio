@@ -1,14 +1,11 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Progress } from "@material-tailwind/react";
 import { nunito } from "../layout";
 import { Skeleton, Tooltip } from "@mui/material";
-import { useInView } from "framer-motion";
 
 const Skills = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
   const [skills, setSkills] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -30,10 +27,7 @@ const Skills = () => {
   return (
     <>
       {loading === false ? (
-        <div
-          className="md:grid-cols-2 w-full grid gap-y-6 gap-4 grid-cols-1"
-          ref={ref}
-        >
+        <div className="md:grid-cols-2 w-full grid gap-y-6 gap-4 grid-cols-1">
           {skills.map((skill, i) => (
             <div key={i}>
               <h4
@@ -46,7 +40,7 @@ const Skills = () => {
               </p>
               <Tooltip title={`${skill.percentage}%`} placement="top-end">
                 <Progress
-                  value={isInView ? skill.percentage : 0}
+                  value={skill.percentage}
                   size="lg"
                   className="border border-gray-900/10 bg-gray-900/5 p-1 px-2 shadow-inner shadow-zinc-300 progress w-full cursor-pointer duration-300"
                 />
