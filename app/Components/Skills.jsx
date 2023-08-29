@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { Progress } from "@material-tailwind/react";
 import { nunito } from "../layout";
@@ -7,7 +7,7 @@ import { Skeleton, Tooltip } from "@mui/material";
 import { useInView } from "framer-motion";
 
 const Skills = () => {
-  const ref = React.useRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref);
   const [skills, setSkills] = useState([]);
   const [loading, setLoading] = useState(true);
