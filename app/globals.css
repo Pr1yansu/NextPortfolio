@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Global Styling System */
+html {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  line-height: 1.3;
+  transition: all 0.1s ease-in-out;
+  text-transform: capitalize;
+  color: #212122;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(99, 219, 255, 0.171);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(99, 219, 255, 0.171);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: rgb(99, 219, 255);
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6,
+p,
+li,
+span {
+  font-size: 16px;
+}
+
+.banner {
+  background-image: url("/assets/HomeBg.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Global Styling System End */
+
+/* swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  color: #fff;
+  z-index: 9;
+
+  background-color: #21212253;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  transition: all 0.1s ease-in-out;
+  transform: translate(0, -50%);
+  top: 50%;
+}
+
+.swiper-button-next {
+  right: 5px;
+}
+
+.swiper-button-prev {
+  left: 5px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.swiper-button-prev::after {
+  transform: rotate(-135deg);
+}
+
+.swiper-button-next::after {
+  transform: rotate(45deg);
+}
+
+/* swiper end */
+
+/* progress bars */
+.progress>div {
+  padding: 2px !important;
+  background-color: #212122;
+  border-radius: 5px;
+  box-shadow: #2121224f 0px 0px 2px 1px;
+  transition: all 5s ease-in-out;
+}
+
+
+/* progress bars end */
+
+
+
+/* media query */
+@media (max-width: 1538px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6,
+  p,
+  li,
+  span {
+    font-size: 14px;
+  }
+
+}
+
+/* media query end */
