@@ -6,11 +6,13 @@ import Card2 from "./Cards/Card2";
 import Card3 from "./Cards/Card3";
 import Card4 from "./Cards/Card4";
 import Card5 from "./Cards/Card5";
+import ParticleContainer from "./Cards/ParticleContainer";
 import { motion } from "framer-motion";
 
 const ImageComponent = () => {
   return (
     <div className="2xl:w-1/2 xl:w-2/3 w-full max-xl:order-1 relative flex justify-center">
+      <ParticleContainer />
       <Card1 />
       <Card2 />
       <Card3 />
